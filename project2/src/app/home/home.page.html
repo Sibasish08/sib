@@ -1,0 +1,119 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <h1>Welcome</h1>
+      <!-- <ion-button (click)="logIn()" color="primary">lognin</ion-button> -->
+      <!-- <ion-button (click)="register()" color="primary">Register</ion-button> -->
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+   
+
+    <ion-slide>
+      <div class="contaier-login">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h1>Registration From</h1>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-list>
+
+                <ion-item>
+                  <ion-icon name="person-circle-outline" class="icon-login"></ion-icon>
+                  <ion-input name="user" type="text" required placeholder="FirstName" id="fname" name="fname" formControlName="fname"></ion-input>
+                </ion-item>
+                <br />
+                <ion-item>
+                  <ion-icon name="people-circle-outline" class="icon-login"></ion-icon>
+                  <ion-input name="password" type="text" required placeholder="LastName" id="lname" name="lname" formControlName="lname"></ion-input>
+                </ion-item>
+
+              </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-list>
+
+                <ion-item>
+                  <ion-icon name="person-add-outline" class="icon-login"></ion-icon>
+                  <ion-input name="user" type="text" required placeholder="user or email" id="username" name="username" formControlName="username"></ion-input>
+                </ion-item>
+                <br />
+                <ion-item>
+                  <ion-icon name="lock-closed-outline" class="icon-login"></ion-icon>
+                  <ion-input name="password" type="password" required placeholder="*********" id="password" name="password" formControlName="password"></ion-input>
+                </ion-item>
+
+              </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" fill="solid" expand="full">
+                Create Account
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button (click)="logIn()" fill="solid" expand="full">
+                Login
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          
+        </ion-grid>
+      </div>
+    </ion-slide>
+  </form>
+  <div>
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Camera
+          </mat-panel-title>
+          <mat-panel-description>
+           
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ion-button (click)="camera()" color="primary">Camera</ion-button>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            GPS Location
+          </mat-panel-title>
+          <mat-panel-description>
+         
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ion-button (click)="geolocations()" color="primary">geolocations</ion-button>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            SignaturePad
+          </mat-panel-title>
+          <mat-panel-description>
+         
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ion-button (click)="signature()" color="primary">SignaturePad</ion-button>
+      </mat-expansion-panel>
+        
+      
+    </mat-accordion>
+  </div>
+
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <h1>Welcome</h1>
+      <!-- <ion-button (click)="logIn()" color="primary">lognin</ion-button> -->
+      <!-- <ion-button (click)="register()" color="primary">Register</ion-button> -->
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div>
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Camera
+          </mat-panel-title>
+          <mat-panel-description>
+           
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ion-button (click)="camera()" color="primary">Camera</ion-button>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            GPS Location
+          </mat-panel-title>
+          <mat-panel-description>
+         
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ion-button (click)="geolocations()" color="primary">geolocations</ion-button>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            SignaturePad
+          </mat-panel-title>
+          <mat-panel-description>
+         
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ion-button (click)="signature()" color="primary">SignaturePad</ion-button>
+      </mat-expansion-panel>
+        
+      
+    </mat-accordion>
+  </div>
+
+</ion-content>

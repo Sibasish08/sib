@@ -1,0 +1,129 @@
+<!-- 
+
+
+      
+
+
+
+     
+
+      <ion-content>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>UserName</mat-label>
+            <input matInput placeholder="Ex.Vijay">
+          </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        </form>
+      </ion-content>
+
+     
+
+    
+ -->
+
+<!-- <ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+   
+    <p>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" formControlName="username">
+    </p>
+    <p>
+      <label for="password">Password </label>
+      <input type="password" id="password" name="password" formControlName="password">
+    </p>
+    <button type="submit">Login</button>
+    </form>
+ </ion-content> -->
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <ion-grid class="grid1">
+
+      <ion-row class="row1">
+        <ion-col>
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="row2">
+        <ion-col>
+
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <ion-slide>
+      <div class="contaier-login">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h1>User Login</h1>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-list>
+
+                <ion-item>
+                  <ion-icon name="person" class="icon-login"></ion-icon>
+                  <ion-input name="user" type="text" required placeholder="user or email" id="username" name="username" formControlName="username"></ion-input>
+                </ion-item>
+                <br />
+                <ion-item>
+                  <ion-icon name="lock-closed-outline" class="icon-login"></ion-icon>
+                  <ion-input name="password" type="password" required placeholder="*********" id="password" name="password" formControlName="password"></ion-input>
+                </ion-item>
+
+              </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+            
+              <ion-button type="submit" fill="solid" expand="full">
+                ENTER
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                <h3><a (click)="register()">Create New Account</a></h3>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+  </form>
+</ion-content>
+
+<!-- <ion-content>
+  <form [formGroup]="profileForm" (ngSubmit)="Login()">
+    <ion-list>
+    <ion-item>
+    <ion-label position="stacked">Username</ion-label>
+    <ion-input formControlName="username" autocomplete="off" type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+    <ion-label position="stacked">Password</ion-label>
+    <ion-input formControlName="password" autocomplete="off" type="password"></ion-input>
+    </ion-item>
+    
+    <ion-item lines='none'>
+    <a routerLink='/signup'>Create Account</a>
+    </ion-item>
+    </ion-list>
+    <ion-button expand="block" share="round" color="success" (click)='Login()'>Login</ion-button>
+    </form>
+</ion-content> -->

@@ -1,0 +1,12 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "project",
+  "bundledWebRuntime": true,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

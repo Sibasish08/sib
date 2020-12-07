@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>GPS Location</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="getLoc()" expand="block">Get Location</ion-button>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Location Info</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>
+        Latitue
+      </ion-label>
+      <ion-badge slot="end">{{lat}}</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        longitude
+      </ion-label>
+      <ion-badge slot="end">{{lng}}</ion-badge>
+    </ion-item>
+    </ion-list>
+</ion-content> -->
+
+
+<ion-card>
+
+  <ion-card-header>
+    <ion-card-title>Coordinates</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>Latitude: {{ latitude }}</ion-item>
+    <ion-item>Longitude: {{ longitude }}</ion-item>
+
+    <ion-button (click)="onGps()" fill="solid" expand="full">
+      SAVE
+    </ion-button>
+  </ion-card-content>
+</ion-card>
